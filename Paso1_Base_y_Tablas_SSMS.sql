@@ -28,8 +28,8 @@ CREATE TABLE PRODUCTO
     existencias INT, --cantidad de producto existentes
     precio DECIMAL(10,2) NOT NULL, --precio costo
     preciov DECIMAL(10,2) NOT NULL, --precio venta
-    ganancia AS previo - precio, --campo calculado para calcular la ganancia
-    CHECK(previo > precio) --precio venta tiene que ser mayor al precio de compra
+    ganancia AS preciov - precio, --campo calculado para calcular la ganancia
+    CHECK(preciov > precio) --precio venta tiene que ser mayor al precio de compra
 )
 GO
 
@@ -59,3 +59,4 @@ WHERE
 ORDER BY TABLE_NAME
 
 GO
+
