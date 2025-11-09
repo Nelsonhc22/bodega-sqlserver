@@ -60,3 +60,9 @@ ORDER BY TABLE_NAME
 
 GO
 
+INSERT INTO PRODUCTO (idprod, descripcion, existencias, precio, preciov)
+VALUES
+('P0001', 'Manzanas', 50, 1.50, 2.00),
+('P0002', 'Peras', 30, 1.00, 1.80);
+
+
