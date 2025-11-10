@@ -126,3 +126,25 @@ PRINT '- 3 Triggers de bitácora creados';
 PRINT '- 2 Procedimientos almacenados creados';
 PRINT '=============================================';
 GO
+
+--Datos de prueba
+
+-- Continuando desde P0003
+EXEC sp_insertar_producto 'P0003', 'Uvas', 25, 2.00, 4.50;
+EXEC sp_insertar_producto 'P0004', 'Zanahorias', 40, 0.80, 1.80;
+EXEC sp_insertar_producto 'P0005', 'Tomates', 35, 1.20, 2.50;
+EXEC sp_insertar_producto 'P0006', 'Cebollas', 45, 0.90, 1.90;
+---
+-- Pedidos con formato similar
+EXEC sp_realizar_pedido 'PD0001', 'P0001', 10, 'cliente_restaurante';
+EXEC sp_realizar_pedido 'PD0002', 'P0003', 8, 'cliente_mercado';
+EXEC sp_realizar_pedido 'PD0003', 'P0004', 15, 'cliente_hotel';
+
+--Pruebas erroneas aproposito
+-- Probar validaciones
+PRINT '4. Probando validaciones...';
+EXEC sp_insertar_producto 'P0001', 'Manzanas Verdes', 10, 1.20, 2.00; -- Debe fallar
+EXEC sp_realizar_pedido 'PD0008', 'P0012', 20, 'cliente_exportador'; -- Debe fallar
+
+
+
