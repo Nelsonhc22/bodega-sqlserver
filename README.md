@@ -166,3 +166,15 @@ El proyecto incluye consultas avanzadas sobre la base de datos de ejemplo Northw
 2. **Detalle de ventas:** Muestra vendedor, fecha, producto y cantidad vendida
 3. **Top vendedores:** Lista vendedores con ventas superiores a $100,000
 
+
+Como ejecutamos el Paso4_Consultas_Northwind.sql 
+
+Nosotros para ejecutar las consultas instalamos la base de datos Northwind y la descargamos de el script oficial de Microsoft:
+https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/databases/northwind-pubs/instnwnd.sql
+
+creamos la base de datos:
+   CREATE DATABASE Northwind
+   GO
+
+y ejecutamos el script descargado en la base de datos Northwind para luego ejecutar el archivo nuevo agregado de  `Paso4_Consultas_Northwind.sql`
+
